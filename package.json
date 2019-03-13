@@ -1,0 +1,30 @@
+{
+  "name": "bs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/typescript/bin/tsc && browserify -e dist/index.js -o dist/script.js",
+    "test": "tsc && mocha dist/**/*.spec.js -C --exit",
+    "testn": "tsc && mocha dist/**/*.spec.js -C",
+    "lint": "eslint src --ext ts",
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "docker": "docker build -t bs . && docker run -p 80:3001 bs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.29",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "tsc": "^1.20150623.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2",
+    "typescript-eslint-parser": "^16.0.0"
+  }
+}
