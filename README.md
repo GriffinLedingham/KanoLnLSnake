@@ -1,1 +1,1 @@
-# LNLSnake
+# KanoLnLSnake
