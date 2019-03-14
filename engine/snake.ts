@@ -2,13 +2,17 @@ class Snake {
   public body:    Array<{x: number, y: number}>
   public health:  number
   public name:    string
+  public color:   string
   public id:      string
+  public alive:   boolean
 
   constructor() {
     this.id = 'lnl-snake'
     this.name = window['getName']()
+    this.color = window['getColor']()
     this.health = 100
     this.body = [{x:4,y:5},{x:4,y:6},{x:4,y:7}]
+    this.alive = true
   }
 
   applyMove(direction, board, turn) {
@@ -36,7 +40,6 @@ class Snake {
     } else {
       this.health -= 1
     }
-    console.log(this.body)
   }
 
   getMove(state) {

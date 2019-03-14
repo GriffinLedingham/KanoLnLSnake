@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/typescript/bin/tsc && browserify -e dist/index.js -o dist/script.js",
+    "dev": "tsc --watch",
+    "bf": "watchify dist/index.js -o dist/script.js -v",
     "test": "tsc && mocha dist/**/*.spec.js -C --exit",
     "testn": "tsc && mocha dist/**/*.spec.js -C",
     "lint": "eslint src --ext ts",
@@ -14,7 +15,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "watchify": "^3.11.1"
   },
   "devDependencies": {
     "@types/jquery": "^3.3.29",

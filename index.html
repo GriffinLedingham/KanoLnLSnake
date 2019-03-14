@@ -4,8 +4,17 @@
         <script src="snake/snake.js"></script>
         <script src="dist/script.js"></script>
         <link href="style/style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     </head>
-    <body>
-        <div id="canvas"></div>
+    <body onload="start();">
+        <div id="board_wrapper">
+            <div id="board_bg"></div>
+            <div id="canvas"></div>
+        </div><div id="stats_wrapper">
+            <div id="snake_name"></div>
+            <div id="snake_health_outer">
+                <div id="snake_health_inner"></div>
+            </div>
+        </div>
     </body>
 </html>

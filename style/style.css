@@ -1,19 +1,85 @@
-#canvas {
+body {
+  min-width: 840px;
+  background: #151515;
+  font-family: Roboto;
+}
 
+#board_wrapper {
+  width:60%; padding-top:60%;
+  min-width: 500px;
+  position: relative;
+  display: inline-block;
+}
+
+#stats_wrapper {
+  display: inline-block;
+  width:39%;
+  vertical-align: top;
+}
+
+#snake_name {
+  color:white;
+  font-size: 24px;
+}
+
+#snake_health_outer {
+  width:200px;
+  height:40px;
+  background:black;
+  position: relative;
+}
+
+#snake_health_inner {
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  background:green;
+}
+
+#canvas {
+  position: absolute;
+  left:0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 500px;
+}
+
+#board_bg {
+  position: absolute;
+  left:0;
+  top: 0;
+  bottom: 0;
+  right: 0;
 }
 
 .tile {
-  height:20px;
-  width:20px;
+  height:8%;
+  width:8%;
   display: inline-block;
-  background: #cccccc;
   margin:5px;
+  min-height: 40px;
+  min-width: 40px;
 }
 
-.tile.head, .tile.body, .tile.tail {
-  background: green;
+.tile.head, .tile.body {
+  /* background: green; */
+}
+
+.tile.tail {
+  /* background: orange; */
 }
 
 .tile.food {
-  background: red;
+  background: #c14f4f;
+  border-radius: 100%;
+}
+
+.tile.board {
+  visibility: hidden;
+}
+
+.tile.bg {
+  background:#1d1d1d;
 }
