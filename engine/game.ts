@@ -1,7 +1,7 @@
 import Snake from './snake'
 import Canvas from './canvas'
 
-const TURN_TIME = 10
+const TURN_TIME = 100
 
 class Game {
   public food: Array<{x:number, y:number}>
