@@ -92,8 +92,8 @@ body {
   min-width: 40px;
 }
 
-.tile.head, .tile.body {
-  /* background: green; */
+.tile.head {
+  background: limegreen !important;
 }
 
 .tile.tail {

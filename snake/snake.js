@@ -27,12 +27,18 @@ function getMove(state) {
     if(leftTile == EMPTY_TILE || leftTile == FOOD) {
       dirScores.left += 10
     }
+    if(leftTile == FOOD) {
+      dirScores.left += 5
+    }
   }
   // Check right
   if(head.x < width - 1) {
     let rightTile = board[head.y][head.x + 1]
     if(rightTile == EMPTY_TILE || rightTile == FOOD) {
       dirScores.right += 10
+    }
+    if(rightTile == FOOD) {
+      dirScores.right += 5
     }
   }
   // Check up
@@ -41,6 +47,9 @@ function getMove(state) {
     if(upTile == EMPTY_TILE || upTile == FOOD) {
       dirScores.up += 10
     }
+    if(upTile == FOOD) {
+      dirScores.up += 5
+    }
   }
   // Check down
   if(head.y < height - 1) {
@@ -48,7 +57,13 @@ function getMove(state) {
     if(downTile == EMPTY_TILE || downTile == FOOD) {
       dirScores.down += 10
     }
+    if(downTile == FOOD) {
+      dirScores.down += 5
+    }
   }
+
+  // All food on the board
+  let foods = state.board.food
 
   // Iterate all foods
   for(let food of foods) {

@@ -35,10 +35,14 @@ class Snake {
       this.body.pop()
     }
 
-    if(board[this.body[0].y][this.body[0].x] == 4) {
-      this.health = 100
-    } else {
-      this.health -= 1
+    try {
+      if(board[this.body[0].y][this.body[0].x] == 4) {
+        this.health = 100
+      } else {
+        this.health -= 1
+      }
+    } catch(e) {
+      alert('Game Over')
     }
   }
 

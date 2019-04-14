@@ -12,6 +12,9 @@ function buildGrid(state) {
     [0,0,0,0,0,0,0,0,0,0]
   ]
 
+  let height  = state.board.height
+  let width   = state.board.width
+
   state.board.snakes.forEach((snake) => {
     snake.body.forEach((snakePiece, i) => {
       if(parseInt(i) == 0) {

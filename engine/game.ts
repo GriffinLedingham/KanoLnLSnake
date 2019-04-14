@@ -24,10 +24,6 @@ class Game {
     const snakeMove = this.snake.getMove(this.buildGameState())
     const nextTile = this.getTileInDirection(snakeMove)
     const beforeMoveGrid = this.buildGrid()
-    if(this.checkDeath(beforeMoveGrid, nextTile)) {
-      alert('Game Over')
-      return false
-    }
 
     this.snake.applyMove(snakeMove, this.buildGrid(), this.turn)
 
@@ -44,7 +40,7 @@ class Game {
     if(!this.checkDeath(beforeMoveGrid, nextTile)) {
       setTimeout(() => {this.update()}, TURN_TIME)
     } else {
-      alert('Game Over')
+      setTimeout(() => alert('Game Over'), 0)
     }
   }
 
@@ -110,13 +106,15 @@ class Game {
     for(let i in this.snake.body) {
       let snakePiece = this.snake.body[i]
       if(parseInt(i) == 0) {
-        board[snakePiece.y][snakePiece.x] = 1
+        continue
       } else if(parseInt(i) == this.snake.body.length - 1) {
         board[snakePiece.y][snakePiece.x] = 3
       } else {
         board[snakePiece.y][snakePiece.x] = 2
       }
     }
+
+    board[this.snake.body[0].y][this.snake.body[0].x] = 1
 
     for(let i in this.food) {
       board[this.food[i].y][this.food[i].x] = 4
