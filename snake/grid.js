@@ -1,19 +1,15 @@
 function buildGrid(state) {
-  let board = [
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0,0,0,0]
-  ]
-
+  let board = []
   let height  = state.board.height
   let width   = state.board.width
+
+  // Init empty board
+  for(let i=0;i<height;i++) {
+    board.push([])
+    for(let j=0;j<width;j++) {
+      board[i].push(0)
+    }
+  }
 
   state.board.snakes.forEach((snake) => {
     snake.body.forEach((snakePiece, i) => {

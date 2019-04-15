@@ -4,13 +4,17 @@ const SNAKE_BODY = 2
 const SNAKE_TAIL = 3
 const FOOD       = 4
 
+// Get snake's next move
 function getMove(state) {
-  let board = buildGrid(state)
+  let board   = buildGrid(state)
+  let height  = state.board.height
+  let width   = state.board.width
+
   let mySnake = state.you
-  let head = mySnake.body[0]
-  let nextDir = 'up'
+  let head    = mySnake.body[0]
 
   // Don't hit walls
+  let nextDir = 'up'
   if(head.x == 0 && head.y != 0) {
     nextDir = 'up'
   } else if(head.y == board.length - 1) {
@@ -25,9 +29,9 @@ function getMove(state) {
 }
 
 function getName() {
-  return 'Griffin'
+  return 'Wall Snake'
 }
 
 function getColor() {
-  return 'purple'
+  return '#c9c9ff'
 }

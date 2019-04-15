@@ -36,7 +36,7 @@ class Game {
 
     this.turn += 1
 
-    this.canvas.render(this.buildGrid(), this.snake.color, this.snake.name, this.snake.health)
+    this.canvas.render(this.buildGrid(), this.snake.color, this.snake.name, this.snake.health, this.turn)
     if(!this.checkDeath(beforeMoveGrid, nextTile)) {
       setTimeout(() => {this.update()}, TURN_TIME)
     } else {

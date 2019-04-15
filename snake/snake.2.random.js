@@ -6,15 +6,16 @@ const FOOD       = 4
 
 // Get snake's next move
 function getMove(state) {
-  return 'up'
+  let dirs = ['left','right','up','down']
+  return dirs[Math.floor(Math.random()*dirs.length)]
 }
 
 // Snake name
 function getName() {
-  return 'My Snake'
+  return 'Random Snake'
 }
 
 // Color string or Hex code of snake
 function getColor() {
-  return 'purple'
+  return '#ffbdbd'
 }

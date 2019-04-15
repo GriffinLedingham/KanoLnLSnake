@@ -11,10 +11,10 @@ function getMove(state) {
 
 // Snake name
 function getName() {
-  return 'My Snake'
+  return 'Up Snake'
 }
 
 // Color string or Hex code of snake
 function getColor() {
-  return 'purple'
+  return '#e1f7d5'
 }

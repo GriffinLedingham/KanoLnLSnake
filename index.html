@@ -1,7 +1,6 @@
 <html>
     <head>
         <script src="snake/grid.js"></script>
-        <script src="snake/snake.js"></script>
         <script src="dist/script.js"></script>
         <link href="style/style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -10,6 +9,20 @@
         <div id="stats_wrapper">
             <div id="snake_details">
                 <img src="https://instagram.fyvr3-1.fna.fbcdn.net/vp/88be83df44c1bc8008d170eab10749de/5D1E1689/t51.2885-19/s320x320/25013800_550106941994001_6975311846899187712_n.jpg?_nc_ht=instagram.fyvr3-1.fna.fbcdn.net" />
+                <div id="snake_dd_wrapper">
+                    <div id="turn_wrapper">
+                        Turn: <span id="turn_count"></span>
+                    </div>
+                    <select onchange="location = this.value">
+                        <option style="display:none;">Select a snake..</option>
+                        <option value="index.html">My Snake</option>
+                        <option value="index.html?snake=snake.1.up">1. Up Snake</option>
+                        <option value="index.html?snake=snake.2.random">2. Random Snake</option>
+                        <option value="index.html?snake=snake.3.walls">3. Walls Snake</option>
+                        <option value="index.html?snake=snake.4.middle">4. Middle Snake</option>
+                        <option value="index.html?snake=snake.5.final">5. Final Snake</option>
+                    </select>
+                </div>
                 <div id="snake_details_inner">
                     <div id="snake_name"></div>
                     <div id="snake_health_outer">

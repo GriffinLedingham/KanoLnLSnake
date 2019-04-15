@@ -15,10 +15,10 @@ function getMove(state) {
 
   // Safety scores
   let dirScores = {
-    left: 0,
-    right: 0,
-    up: 0,
-    down: 0
+    left:   0,
+    right:  0,
+    up:     0,
+    down:   0
   }
 
   // Check left
@@ -50,22 +50,6 @@ function getMove(state) {
     }
   }
 
-  // Iterate all foods
-  for(let food of foods) {
-    // Is food to the left? If not, to the right?
-    if(food.x < head.x) {
-      dirScores.left += 2
-    } else if(food.x > head.x) {
-      dirScores.right += 2
-    }
-    // Is food above us? If not, below us?
-    if(food.y < head.y) {
-      dirScores.up += 2
-    } else if(food.y > head.y) {
-      dirScores.down += 2
-    }
-  }
-
   // Default to up in case no best direction is found
   let bestDir = 'up'
   let bestScore = -Infinity
@@ -85,12 +69,10 @@ function getMove(state) {
   return bestDir
 }
 
-// Snake name
 function getName() {
-  return 'Griffin'
+  return 'Middle Snake'
 }
 
-// Color string or Hex code of snake
 function getColor() {
-  return 'purple'
+  return '#ffffff'
 }

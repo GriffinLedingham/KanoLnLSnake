@@ -22,7 +22,6 @@ body {
   width: 200px;
   display: block;
   margin: auto;
-  margin-bottom: 20px;
 }
 
 #stats_wrapper {
@@ -63,7 +62,7 @@ body {
   top:0;
   left:0;
   bottom:0;
-  background: #35b158;
+  background: #77dd77;
 }
 
 #canvas {
@@ -83,6 +82,16 @@ body {
   right: 0;
 }
 
+#snake_dd_wrapper {
+  margin-bottom: 40px;
+  text-align: center;
+  color:white;
+}
+
+#turn_wrapper {
+  margin-bottom: 20px;
+}
+
 .tile {
   height:8%;
   width:8%;
@@ -93,7 +102,7 @@ body {
 }
 
 .tile.head {
-  background: limegreen !important;
+  background: #77dd77 !important;
 }
 
 .tile.tail {

@@ -12,8 +12,9 @@ class Canvas {
     }
   }
 
-  render(board, snakeColor, snakeName, snakeHealth) {
+  render(board, snakeColor, snakeName, snakeHealth, turn) {
     $('#snake_name').text(snakeName)
+    $('#turn_count').text(turn)
     $('#snake_health_inner').css('width', `${snakeHealth}%`)
     $('#canvas').html('')
     for(let i in board) {
